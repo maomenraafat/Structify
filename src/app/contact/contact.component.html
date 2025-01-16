@@ -1,0 +1,51 @@
+<section class="contact mb-4">
+  <!-- <h2 class="fw-bolder fs-1 pt-5 mb-3 text-uppercase text-center">
+    contact section
+  </h2> -->
+  <app-star [color]="colorOfText" [sectionName]="nameOfPage"></app-star>
+  <form class="p-3 mx-auto mt-5">
+    <label for="userName" [class.top-0]="userName" class="position-relative"
+      >userName :
+    </label>
+    <input
+      id="userName"
+      type="text"
+      placeholder="userName"
+      name="userName"
+      class="form-control border-0 border-bottom py-3 position-relative"
+      [(ngModel)]="userName"
+    /><label for="userAge" [class.top-0]="userAge" class="position-relative"
+      >userAge : </label
+    ><input
+      id="userAge"
+      type="number"
+      placeholder="userAge"
+      name="userAge"
+      class="form-control border-0 border-bottom py-3 position-relative"
+      [(ngModel)]="userAge"
+    /><label for="userEmail" [class.top-0]="userEmail" class="position-relative"
+      >userEmail : </label
+    ><input
+      id="userEmail"
+      type="email"
+      placeholder="userEmail"
+      name="userEmail"
+      class="form-control border-0 border-bottom py-3 position-relative"
+      [(ngModel)]="userEmail"
+    /><label
+      for="userPassword"
+      [class.top-0]="userPassword"
+      class="position-relative"
+      >userPassword : </label
+    ><input
+      id="userPassword"
+      type="password"
+      placeholder="userPassword"
+      name="userPassword"
+      class="form-control border-0 border-bottom py-3 position-relative"
+      [(ngModel)]="userPassword"
+    /><button class="btn mt-4 text-white" style="background-color: #1abc9c">
+      send Message
+    </button>
+  </form>
+</section>

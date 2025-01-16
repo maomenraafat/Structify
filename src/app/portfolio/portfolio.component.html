@@ -1,0 +1,81 @@
+<section class="portfolio mb-4">
+  <!-- <h2 class="fw-bolder fs-1 pt-5 mb-3 text-uppercase text-center">
+    portfolio component
+  </h2> -->
+  <app-star [color]="colorOfText" [sectionName]="nameOfPage"></app-star>
+  <div class="container">
+    <div class="row g-5">
+      @for (image of images; track $index) {
+      <div class="col-md-6 col-lg-4">
+        <div
+          class="inner position-relative"
+          (click)="openModal(images[$index])"
+        >
+          <div
+            class="layer position-absolute start-0 top-0 bottom-0 end-0 d-flex align-items-center justify-content-center"
+          >
+            <i class="text-white fa-solid fa-plus fa-6x"></i>
+          </div>
+          <img
+            [src]="images[$index]"
+            class="w-100 rounded-3"
+            alt="Portfolio Image"
+          />
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+  @if (isModalOpen) {
+  <div
+    class="modal position-fixed start-0 w-100 top-0 h-100 bg-primary bg-opacity-25 d-flex justify-content-center align-items-center"
+    (click)="closeModal($event)"
+  >
+    <img
+      [src]="modalImageSrc"
+      class="rounded-3"
+      width="600"
+      alt="Modal Image"
+    />
+  </div>
+  }
+</section>
+
+<!-- <section class="portfolio mb-4">
+  <h2 class="fw-bolder fs-1 pt-4 mb-3 text-uppercase text-center">
+    portfolio component
+  </h2>
+  <div class="mb-3 d-flex align-items-center justify-content-center">
+    <div class="line me-3"></div>
+    <i class="fa-solid fa-star"></i>
+    <div class="line ms-3"></div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="inner position-relative" >
+          <div
+            class="layer position-absolute start-0 top-0 bottom-0 end-0 d-flex align-items-center justify-content-center"
+          >
+            <i
+              _ngcontent-kfa-c19=""
+              class="text-white fa-solid fa-plus fa-6x"
+            ></i>
+          </div>
+          <img
+            src="/images/portfolio/poert1.png"
+            class="w-100 rounded-3"
+            alt=""
+          />
+        </div>
+        @defer (on interaction(hamada)) {
+        <div
+          class="model__ position-fixed start-0 w-100 top-0 h-100 bg-primary bg-opacity-25 d-flex justify-content-center align-items-center"
+        >
+          <img src="/images/portfolio/poert1.png" class="" width="600" alt="" />
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section> -->
